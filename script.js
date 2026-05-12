@@ -49,3 +49,43 @@ window.addEventListener("resize", () => {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 });
+
+const btn = document.getElementById("aceitar");
+const scene = document.getElementById("bill-scene");
+const eye = document.querySelector(".bill-eye");
+
+btn.addEventListener("click", () => {
+  scene.classList.add("show");
+
+  /* SOM */
+  const audio = new Audio("bill.mp3");
+  audio.volume = 0.4;
+  audio.play();
+
+  /* FECHAR */
+  setTimeout(() => {
+    scene.classList.remove("show");
+  }, 7000);
+});
+
+/* OLHO SEGUINDO MOUSE */
+document.addEventListener("mousemove", (e) => {
+  const x = (e.clientX / window.innerWidth - 0.5) * 10;
+  const y = (e.clientY / window.innerHeight - 0.5) * 10;
+
+  eye.style.transform = `translate(${x}px, ${y}px)`;
+});
+const dipperBtn = document.getElementById("dipperBtn");
+const dipperScene = document.getElementById("dipper-scene");
+
+dipperBtn.addEventListener("click", () => {
+  dipperScene.classList.add("show");
+
+  const audio = new Audio("misterio.mp3");
+  audio.volume = 0.4;
+  audio.play();
+
+  setTimeout(() => {
+    dipperScene.classList.remove("show");
+  }, 7000);
+});
