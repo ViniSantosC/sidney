@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   background:
     radial-gradient(circle at top, rgba(140, 0, 255, 0.12), transparent 35%),
@@ -1198,4 +1197,699 @@ footer h2 {
     to{
         rotate: 360deg;
     }
+}
+/* ===== MEDIA QUERIES - RESPONSIVIDADE ===== */
+
+/* Tablets - 768px e abaixo */
+@media (max-width: 768px) {
+  .titulo {
+    font-size: 4rem;
+    margin: 0.5rem;
+  }
+
+  .subtitulo {
+    font-size: 1.8rem;
+  }
+
+  .button {
+    width: 50%;
+    font-size: 1.1rem;
+    padding: 0.8rem;
+  }
+
+  .button img {
+    width: 30px;
+  }
+
+  .convite {
+    width: 50%;
+    font-size: 0.9rem;
+  }
+
+  .titulo2 {
+    font-size: 2rem;
+  }
+
+  .subtitulo2 {
+    font-size: 0.9rem;
+  }
+
+  .flex2 {
+    flex-wrap: wrap;
+  }
+
+  .caixa {
+    width: 45%;
+    padding: 1.5rem;
+    margin: 0.5rem auto;
+  }
+
+  .caixa img {
+    width: 40px;
+  }
+
+  .caixa h2 {
+    font-size: 1.3rem;
+  }
+
+  .caixa p {
+    font-size: 0.9rem;
+  }
+
+  .flex3 {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+    width: 90%;
+  }
+
+  .pendrive {
+    width: 20%;
+    height: auto;
+  }
+
+  .titulo3 {
+    font-size: 2rem;
+  }
+
+  .subtitulo3 {
+    font-size: 1rem;
+  }
+
+  .flex4 {
+    flex-wrap: wrap;
+  }
+
+  .caixa2 {
+    width: 45%;
+    padding: 1.5rem;
+    margin: 1rem auto;
+    font-size: 1.1rem;
+  }
+
+  .caixa3 {
+    width: 90%;
+    padding: 1.5rem;
+    font-size: 1.2rem;
+  }
+
+  .titulo4 {
+    font-size: 2rem;
+  }
+
+  .caixa4 {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  .caixa4 h3 {
+    font-size: 1.2rem;
+  }
+
+  .titulo5 {
+    font-size: 2rem;
+  }
+
+  .titulo6 {
+    font-size: 2rem;
+  }
+
+  .pergunta {
+    font-size: 1rem;
+  }
+
+  .titulo7 {
+    font-size: 3.5rem;
+  }
+
+  .titulo8 {
+    font-size: 3.5rem;
+  }
+
+  .flex6 {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .btn1 {
+    width: 80%;
+    font-size: 1.1rem;
+    padding: 1rem 20px;
+  }
+
+  .btn1 img {
+    width: 25px;
+  }
+
+  .btn2 {
+    width: 80%;
+    font-size: 1.1rem;
+    padding: 1rem 20px;
+  }
+
+  .btn2 img {
+    width: 30px;
+  }
+
+  .agrade {
+    width: 85%;
+    padding: 1rem;
+  }
+
+  .agrade img {
+    width: 80px;
+  }
+
+  .agrade h1 {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  }
+
+  footer h2 {
+    font-size: 1.8rem;
+  }
+
+  footer h3 {
+    font-size: 1rem;
+  }
+
+  .glow {
+    width: 400px;
+    height: 400px;
+  }
+
+  .bill-body {
+    width: 180px;
+  }
+
+  .dipper {
+    width: 200px;
+  }
+
+  .journal {
+    width: 80px;
+  }
+
+  .light {
+    width: 400px;
+    height: 400px;
+  }
+
+  .parte1 {
+    min-height: auto;
+    padding: 0.5rem;
+  }
+
+  .parte3 {
+    height: auto;
+    padding: 1rem;
+  }
+
+  .parte4 {
+    height: auto;
+    padding: 0.5rem;
+  }
+
+  .parte5 {
+    padding: 1rem;
+  }
+
+  .flex {
+    gap: 0.5rem;
+  }
+
+  .flex p {
+    font-size: 1rem;
+  }
+
+  .flex5 {
+    gap: 0.5rem;
+  }
+
+  .flex5 p {
+    font-size: 1rem;
+  }
+
+  .flex7 {
+    gap: 0.5rem;
+  }
+
+  .lendario {
+    font-size: 1.3rem;
+  }
+
+  .h3 {
+    font-size: 1rem;
+  }
+
+  .caixa4 h3 {
+    font-size: 1rem;
+  }
+
+  .teste {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+/* Smartphones - 480px e abaixo */
+@media (max-width: 480px) {
+  .titulo {
+    font-size: 2.5rem;
+    margin: 0.3rem;
+  }
+
+  .subtitulo {
+    font-size: 1.3rem;
+  }
+
+  .button {
+    width: 80%;
+    font-size: 0.9rem;
+    padding: 0.6rem;
+    margin: 2rem auto;
+  }
+
+  .button img {
+    width: 25px;
+    margin-right: 5px;
+  }
+
+  .convite {
+    width: 90%;
+    font-size: 0.8rem;
+    padding: 0.3rem;
+  }
+
+  .convite span {
+    margin-right: 5px;
+  }
+
+  .flex p {
+    font-size: 0.9rem;
+  }
+
+  .circulo {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+  }
+
+  .titulo2 {
+    font-size: 1.5rem;
+    margin: 0.5rem auto;
+  }
+
+  .subtitulo2 {
+    font-size: 0.8rem;
+    margin: 0.5rem auto;
+  }
+
+  .caixa {
+    width: 90%;
+    padding: 1rem;
+    margin: 0.5rem auto;
+  }
+
+  .caixa img {
+    width: 35px;
+    margin: 0.5rem;
+  }
+
+  .caixa h2 {
+    font-size: 1.1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .caixa p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .flex3 {
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1rem;
+    width: 95%;
+  }
+
+  .pendrive {
+    width: 30%;
+    height: auto;
+  }
+
+  .titulo3 {
+    font-size: 1.5rem;
+    margin: 0.5rem auto;
+  }
+
+  .lendario {
+    font-size: 1rem;
+  }
+
+  .subtitulo3 {
+    font-size: 0.9rem;
+  }
+
+  .caixa2 {
+    width: 90%;
+    padding: 1rem;
+    margin: 0.8rem auto;
+    font-size: 1rem;
+  }
+
+  .caixa2 h2 {
+    font-size: 1rem;
+  }
+
+  .caixa3 {
+    width: 95%;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .caixa3 h2 {
+    font-size: 1rem;
+  }
+
+  .titulo4 {
+    font-size: 1.5rem;
+    margin: 0.5rem auto;
+  }
+
+  .caixa4 {
+    width: 98%;
+    padding: 0.8rem;
+    margin: auto;
+  }
+
+  .caixa4 h3 {
+    font-size: 0.9rem;
+    margin: 0.5rem auto;
+  }
+
+  .flex5 {
+    gap: 0.3rem;
+    margin: 0.5rem auto;
+  }
+
+  .flex5 p {
+    font-size: 0.9rem;
+  }
+
+  .circulo1,
+  .circulo2,
+  .circulo3 {
+    width: 15px;
+    height: 15px;
+  }
+
+  .h3 {
+    font-size: 0.85rem;
+    margin: 0.5rem auto;
+  }
+
+  .h31,
+  .h32,
+  .h33,
+  .h34,
+  .h35,
+  .h36,
+  .h37 {
+    font-size: 0.85rem;
+    margin: 0.5rem auto;
+  }
+
+  .titulo5 {
+    font-size: 1.5rem;
+    margin: 1rem auto;
+  }
+
+  .titulo6 {
+    font-size: 1.5rem;
+    margin: 1rem auto;
+  }
+
+  .pergunta {
+    font-size: 0.9rem;
+  }
+
+  .titulo7 {
+    font-size: 2.5rem;
+  }
+
+  .titulo8 {
+    font-size: 2.5rem;
+  }
+
+  .flex6 {
+    flex-direction: column;
+    gap: 0.8rem;
+    margin: 0.5rem auto;
+  }
+
+  .btn1 {
+    width: 90%;
+    font-size: 0.95rem;
+    padding: 0.8rem 15px;
+    margin: 0.5rem auto;
+  }
+
+  .btn1 img {
+    width: 20px;
+  }
+
+  .btn2 {
+    width: 90%;
+    font-size: 0.95rem;
+    padding: 0.8rem 15px;
+    margin: 0.5rem auto;
+  }
+
+  .btn2 img {
+    width: 25px;
+  }
+
+  .agrade {
+    width: 95%;
+    padding: 0.8rem;
+  }
+
+  .agrade img {
+    width: 60px;
+  }
+
+  .agrade h1 {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+  }
+
+  footer {
+    padding: 1rem;
+  }
+
+  footer h2 {
+    font-size: 1.3rem;
+  }
+
+  footer h3 {
+    font-size: 0.9rem;
+  }
+
+  .flex7 {
+    gap: 0.3rem;
+    margin: 0.5rem auto;
+  }
+
+  .circulo4,
+  .c5 {
+    width: 15px;
+    height: 15px;
+  }
+
+  .glow {
+    width: 250px;
+    height: 250px;
+    filter: blur(60px);
+  }
+
+  .bill-body {
+    width: 140px;
+  }
+
+  .dipper {
+    width: 150px;
+  }
+
+  .journal {
+    width: 60px;
+    right: 20%;
+    top: 20%;
+  }
+
+  .light {
+    width: 300px;
+    height: 300px;
+  }
+
+  .parte1 {
+    min-height: auto;
+    padding: 0.3rem;
+  }
+
+  .parte2 {
+    padding: 0.5rem;
+  }
+
+  .parte3 {
+    height: auto;
+    padding: 0.5rem;
+  }
+
+  .parte4 {
+    height: auto;
+    padding: 0.3rem;
+  }
+
+  .parte5 {
+    padding: 0.5rem;
+  }
+
+  .flex {
+    gap: 0.3rem;
+  }
+
+  .flex2 {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .flex4 {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .teste {
+    position: relative;
+    z-index: 1;
+  }
+
+  #matrixCanvas {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+/* Extra pequeno - 360px e abaixo */
+@media (max-width: 360px) {
+  .titulo {
+    font-size: 2rem;
+  }
+
+  .subtitulo {
+    font-size: 1.1rem;
+  }
+
+  .titulo2 {
+    font-size: 1.3rem;
+  }
+
+  .titulo3 {
+    font-size: 1.3rem;
+  }
+
+  .titulo4 {
+    font-size: 1.3rem;
+  }
+
+  .titulo5 {
+    font-size: 1.3rem;
+  }
+
+  .titulo6 {
+    font-size: 1.3rem;
+  }
+
+  .titulo7 {
+    font-size: 2rem;
+  }
+
+  .titulo8 {
+    font-size: 2rem;
+  }
+
+  .button {
+    width: 90%;
+    font-size: 0.85rem;
+  }
+
+  .btn1,
+  .btn2 {
+    width: 95%;
+    font-size: 0.85rem;
+    padding: 0.7rem 10px;
+  }
+
+  .caixa {
+    width: 95%;
+  }
+
+  .caixa2 {
+    width: 95%;
+  }
+
+  .caixa3 {
+    width: 98%;
+  }
+
+  .agrade {
+    width: 98%;
+  }
+
+  .glow {
+    width: 200px;
+    height: 200px;
+  }
+
+  .bill-body {
+    width: 120px;
+  }
+
+  .dipper {
+    width: 130px;
+  }
+
+  .light {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+/* Desktops grandes - 1200px e acima */
+@media (min-width: 1200px) {
+  .titulo {
+    font-size: 8rem;
+  }
+
+  .button {
+    width: 30%;
+  }
+
+  .convite {
+    width: 30%;
+  }
+
+  .caixa {
+    width: 28%;
+  }
+
+  .btn1,
+  .btn2 {
+    width: 45%;
+  }
+
+  .agrade {
+    width: 55%;
+  }
 }
