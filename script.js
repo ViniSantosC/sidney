@@ -89,3 +89,123 @@ dipperBtn.addEventListener("click", () => {
     dipperScene.classList.remove("show");
   }, 7000);
 });
+
+const button = document.getElementById("openMobile");
+
+const overlay = document.getElementById("overlay");
+
+const phone = document.querySelector(".phone");
+
+const finalMessage = document.getElementById("finalMessage");
+
+button.addEventListener("click", () => {
+  overlay.classList.add("active");
+
+  startParticles();
+
+  /* depois de 10 segundos */
+
+  setTimeout(() => {
+    /* animação sumindo */
+
+    phone.classList.add("hide");
+
+    /* remove totalmente */
+
+    setTimeout(() => {
+      phone.style.display = "none";
+
+      finalMessage.classList.add("show");
+    }, 10000);
+  }, 10000);
+});
+
+button.addEventListener("click", () => {
+  overlay.classList.add("active");
+
+  setTimeout(() => {
+    message.classList.add("show");
+
+    startParticles();
+  }, 4000);
+});
+
+/* PARTICULAS */
+
+function startParticles() {
+  const canvas = document.getElementById("particles");
+  const ctx = canvas.getContext("2d");
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  const particles = [];
+
+  const textCanvas = document.createElement("canvas");
+  const textCtx = textCanvas.getContext("2d");
+
+  textCanvas.width = canvas.width;
+  textCanvas.height = canvas.height;
+
+  textCtx.fillStyle = "white";
+
+  let fontSize = 140;
+
+  if (window.innerWidth < 600) {
+    fontSize = 70;
+  }
+
+  if (window.innerWidth < 400) {
+    fontSize = 50;
+  }
+
+  textCtx.font = `bold ${fontSize}px Arial`;
+
+  textCtx.textAlign = "center";
+
+  textCtx.fillText("3DM te ama", canvas.width / 2, canvas.height / 2);
+
+  const imageData = textCtx.getImageData(0, 0, canvas.width, canvas.height);
+
+  for (let y = 0; y < imageData.height; y += 6) {
+    for (let x = 0; x < imageData.width; x += 6) {
+      const index = (y * imageData.width + x) * 4;
+
+      if (imageData.data[index + 3] > 128) {
+        particles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+
+          targetX: x,
+          targetY: y,
+
+          size: 2,
+        });
+      }
+    }
+  }
+
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    particles.forEach((p) => {
+      p.x += (p.targetX - p.x) * 0.015;
+      p.y += (p.targetY - p.y) * 0.015;
+
+      ctx.beginPath();
+
+      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+
+      ctx.fillStyle = "#00ffae";
+
+      ctx.shadowBlur = 15;
+      ctx.shadowColor = "#00ffae";
+
+      ctx.fill();
+    });
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+}

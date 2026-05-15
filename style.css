@@ -12,7 +12,11 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
 }
-
+#openMobile {
+  display: block;
+  margin: 1rem auto;
+  font-size: 1.1rem;
+}
 #matrixCanvas {
   position: fixed;
   top: 0;
@@ -1893,3 +1897,396 @@ footer h2 {
     width: 55%;
   }
 }
+/* ========================= */
+/* TABLETS */
+/* ========================= */
+
+@media (max-width: 900px){
+
+    .phone{
+        width:280px;
+        height:580px;
+    }
+
+    .screen{
+        padding:25px;
+    }
+
+    .title{
+        font-size:1.7rem;
+    }
+
+    .message h2{
+        font-size:1.5rem;
+    }
+
+    .message p{
+        font-size:.9rem;
+    }
+
+}
+
+/* ========================= */
+/* CELULARES */
+/* ========================= */
+
+@media (max-width: 600px){
+
+    #openMobile{
+        width:85%;
+
+        padding:15px;
+
+        font-size:1rem;
+    }
+
+    .phone{
+        width:240px;
+        height:500px;
+
+        border-radius:28px;
+
+        padding:10px;
+    }
+
+    .screen{
+        border-radius:22px;
+
+        padding:20px;
+    }
+
+    .title{
+        font-size:1.5rem;
+
+        text-align:center;
+    }
+
+    .loading{
+        font-size:.9rem;
+
+        margin-top:20px;
+    }
+
+    .bar{
+        height:8px;
+    }
+
+    .message{
+        margin-top:30px;
+    }
+
+    .message h2{
+        font-size:1.2rem;
+
+        margin-bottom:15px;
+
+        text-align:center;
+    }
+
+    .message p{
+        font-size:.8rem;
+
+        line-height:1.5;
+    }
+
+    .status{
+        padding:12px;
+
+        font-size:.8rem;
+
+        text-align:center;
+    }
+
+    .finalMessage h2{
+        font-size:1.6rem;
+    }
+
+    .finalMessage p{
+        font-size:.9rem;
+    }
+
+}
+
+/* ========================= */
+/* CELULARES PEQUENOS */
+/* ========================= */
+
+@media (max-width: 400px){
+
+    .phone{
+        width:210px;
+        height:440px;
+    }
+
+    .screen{
+        padding:15px;
+    }
+
+    .title{
+        font-size:1.2rem;
+    }
+
+    .loading{
+        font-size:.75rem;
+    }
+
+    .message p{
+        font-size:.72rem;
+    }
+
+    .status{
+        font-size:.7rem;
+    }
+
+    .finalMessage h2{
+        font-size:1.3rem;
+    }
+
+    .finalMessage p{
+        font-size:.8rem;
+    }
+
+}
+.overlay {
+            position: fixed;
+            inset: 0;
+
+            background: rgba(0, 0, 0, 0.95);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            opacity: 0;
+            pointer-events: none;
+
+            transition: 0.5s;
+
+            overflow: hidden;
+          }
+
+          .overlay.active {
+            opacity: 1;
+            pointer-events: all;
+          }
+
+          /* PARTICULAS */
+
+          #particles {
+            position: absolute;
+            inset: 0;
+            opacity: 0.7;
+            filter: blur(0.3px);
+            width: 100%;
+            height: 100%;
+
+            z-index: 1;
+
+            pointer-events: none;
+          }
+
+          /* CELULAR */
+
+          .phone {
+            width: 320px;
+            height: 650px;
+
+            background: #111;
+
+            border-radius: 35px;
+
+            border: 3px solid #2b2b2b;
+
+            padding: 15px;
+
+            z-index: 10;
+
+            transform: translateY(100px) scale(0.7);
+
+            transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+
+            box-shadow: 0 0 50px rgba(0, 255, 174, 0.2);
+          }
+          .phone.hide {
+            opacity: 0;
+
+            transform: scale(0.7) translateY(100px);
+
+            transition: 1s;
+
+            pointer-events: none;
+          }
+          .overlay.active .phone {
+            transform: translateY(0) scale(1);
+          }
+
+          .screen {
+            width: 100%;
+            height: 100%;
+
+            border-radius: 25px;
+
+            background: linear-gradient(to bottom, #03130d, #000);
+
+            padding: 30px;
+
+            color: #00ffae;
+
+            font-family: monospace;
+
+            position: relative;
+
+            overflow: hidden;
+          }
+
+          /* TITULO */
+
+          .title {
+            font-size: 2rem;
+
+            color: #fff;
+
+            text-shadow: 0 0 20px #00ffae;
+          }
+
+          /* DIGITANDO */
+
+          .typing {
+            overflow: hidden;
+            white-space: nowrap;
+
+            width: 0;
+
+            border-right: 2px solid #00ffae;
+
+            animation:
+              typing 2s steps(30, end) forwards,
+              blink 0.8s infinite;
+          }
+
+          @keyframes typing {
+            to {
+              width: 100%;
+            }
+          }
+
+          @keyframes blink {
+            50% {
+              border-color: transparent;
+            }
+          }
+
+          /* LOADING */
+
+          .loading {
+            margin-top: 30px;
+
+            color: #72ffd0;
+          }
+
+          .bar {
+            width: 100%;
+            height: 10px;
+
+            background: #1b1b1b;
+
+            border-radius: 20px;
+
+            margin-top: 20px;
+
+            overflow: hidden;
+          }
+
+          .progress {
+            width: 0%;
+            height: 100%;
+
+            background: #00ffae;
+
+            box-shadow: 0 0 20px #00ffae;
+
+            animation: load 4s forwards;
+          }
+
+          @keyframes load {
+            to {
+              width: 100%;
+            }
+          }
+
+          /* MENSAGEM */
+
+          .message {
+            opacity: 0;
+
+            transform: translateY(20px);
+
+            transition: 0.25s;
+
+            margin-top: 50px;
+          }
+
+          .message.show {
+            opacity: 1;
+            transform: translateY(0);
+          }
+
+          .message h2 {
+            color: #fff;
+
+            margin-bottom: 20px;
+          }
+
+          .message p {
+            margin: 14px 0;
+
+            line-height: 1.5;
+
+            color: #9dffd8;
+          }
+
+          /* STATUS */
+
+          .status {
+            margin-top: 30px;
+
+            padding: 15px;
+
+            border-radius: 15px;
+
+            border: 1px solid rgba(0, 255, 174, 0.2);
+
+            background: rgba(0, 255, 174, 0.05);
+
+            backdrop-filter: blur(10px);
+
+            color: #fff;
+          }
+
+          /* BOTAO */
+
+          #openMobile {
+            padding: 16px 35px;
+
+            border: none;
+
+            border-radius: 15px;
+
+            background: #00ffae;
+
+            color: #000;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.4s;
+
+            box-shadow: 0 0 25px rgba(0, 255, 174, 0.3);
+          }
+
+          #openMobile:hover {
+            transform: scale(1.05);
+
+            box-shadow: 0 0 45px rgba(0, 255, 174, 0.6);
+          }
