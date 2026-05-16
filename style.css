@@ -701,7 +701,7 @@ gap: 1rem;
 }
 .agrade {
   width: 60%;
-  display: block;
+  display: none;
   margin: auto;
   padding: 1rem;
   border-radius: 1rem;
@@ -819,7 +819,9 @@ footer h2 {
     z-index: 9999;
     overflow: hidden;
 }
-
+.mostar {
+  display: block;
+}
 #bill-scene.show{
     opacity: 1;
     visibility: visible;

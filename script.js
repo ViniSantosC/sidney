@@ -53,9 +53,11 @@ window.addEventListener("resize", () => {
 const btn = document.getElementById("aceitar");
 const scene = document.getElementById("bill-scene");
 const eye = document.querySelector(".bill-eye");
+const divObrigado = document.getElementById("obrigadoDiv")
 
 btn.addEventListener("click", () => {
   scene.classList.add("show");
+  divObrigado.classList.add("mostar")
 
   /* SOM */
   const audio = new Audio("bill.mp3");
@@ -65,7 +67,7 @@ btn.addEventListener("click", () => {
   /* FECHAR */
   setTimeout(() => {
     scene.classList.remove("show");
-  }, 7000);
+  }, 5000);
 });
 
 /* OLHO SEGUINDO MOUSE */
@@ -80,6 +82,7 @@ const dipperScene = document.getElementById("dipper-scene");
 
 dipperBtn.addEventListener("click", () => {
   dipperScene.classList.add("show");
+  divObrigado.classList.add("mostar")
 
   const audio = new Audio("misterio.mp3");
   audio.volume = 0.4;
@@ -87,7 +90,7 @@ dipperBtn.addEventListener("click", () => {
 
   setTimeout(() => {
     dipperScene.classList.remove("show");
-  }, 7000);
+  }, 5000);
 });
 
 const button = document.getElementById("openMobile");
@@ -209,3 +212,24 @@ function startParticles() {
 
   animate();
 }
+
+const digita = document.getElementById("digita");
+let texto = `
+Em apenas alguns meses… o senhor conseguiu deixar sua marca no 3DM.
+`
+
+
+let i = 0
+let velocidade = 40
+digita.innerHTML = "";
+
+function digitar() {
+  if(i < texto.length) {
+    digita.textContent += texto.charAt(i);
+
+    i++
+    setTimeout(digitar, velocidade)
+  }  
+}
+digitar()
+

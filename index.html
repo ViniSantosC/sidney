@@ -25,15 +25,15 @@
         <div class="convite">
           <h3><span>>_ </span> // um convite especial • turma 3DM</h3>
         </div>
-        <h1 class="titulo">
+        <h1 class="titulo" id="digita">
           Em apenas alguns meses… o senhor conseguiu deixar sua marca no 3DM.
         </h1>
 
         <h2 class="subtitulo">
           Ajudou a construir <span>quem estamos nos tornando.</span>
         </h2>
-        <button class="button">
-          <img src="img/coração3.png" alt="" />Temos uma Grande Pergunta
+        <button class="button" onclick="document.getElementById('divPergunta').scrollIntoView({behavior: 'smooth'})">
+          <img src="img/coração3.png" alt="" id="btnPergunta" />Temos uma Grande Pergunta
         </button>
       </section>
       <section class="parte2">
@@ -159,7 +159,7 @@
           </h3>
         </div>
       </section>
-      <section class="parte5">
+      <section class="parte5" id="divPergunta">
         <div class="glow"></div>
         <div class="teste">
           <h1 class="titulo5">
@@ -209,7 +209,7 @@
           <img src="img/pngegg (1).png" class="journal" />
         </div>
 
-        <div class="agrade">
+        <div class="agrade" id="obrigadoDiv">
           <img src="img/coracao.png" alt="" />
           <h1>
             Obrigado, professor. <br />
