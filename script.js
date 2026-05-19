@@ -72,8 +72,8 @@ btn.addEventListener("click", () => {
 
 /* OLHO SEGUINDO MOUSE */
 document.addEventListener("mousemove", (e) => {
-  const x = (e.clientX / window.innerWidth - 0.5) * 10;
-  const y = (e.clientY / window.innerHeight - 0.5) * 10;
+  const x = (e.clientX / window.innerWidth - 0.8) * 10;
+  const y = (e.clientY / window.innerHeight - 0.8) * 10;
 
   eye.style.transform = `translate(${x}px, ${y}px)`;
 });
@@ -192,8 +192,8 @@ function startParticles() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     particles.forEach((p) => {
-      p.x += (p.targetX - p.x) * 0.015;
-      p.y += (p.targetY - p.y) * 0.015;
+      p.x += (p.targetX - p.x) * 0.020;
+      p.y += (p.targetY - p.y) * 0.020;
 
       ctx.beginPath();
 
